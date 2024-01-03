@@ -1,9 +1,6 @@
 const Login = require('../model/userLoginmodel'); 
 const User = require('../model/Registrationmodel'); 
-const jwt = require('jsonwebtoken');
-const otpGenerator = require('otp-generator');
 const { generateSessionToken } = require('../utilsFunction/sessionProvider');
-const { sendOTPasSMS } = require('../utilsFunction/otpSender');
 
 async function sendOTP(req, res) {
   const { number } = req.body;
